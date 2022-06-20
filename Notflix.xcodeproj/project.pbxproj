@@ -9,24 +9,21 @@
 /* Begin PBXBuildFile section */
 		DDF93CE2285EB656003B54A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93CE1285EB656003B54A0 /* AppDelegate.swift */; };
 		DDF93CE4285EB656003B54A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93CE3285EB656003B54A0 /* SceneDelegate.swift */; };
-		DDF93CE6285EB656003B54A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93CE5285EB656003B54A0 /* ViewController.swift */; };
-		DDF93CE9285EB656003B54A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF93CE7285EB656003B54A0 /* Main.storyboard */; };
 		DDF93CEB285EB65A003B54A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF93CEA285EB65A003B54A0 /* Assets.xcassets */; };
 		DDF93CEE285EB65A003B54A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF93CEC285EB65A003B54A0 /* LaunchScreen.storyboard */; };
 		DDF93CF9285EB65A003B54A0 /* NotflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93CF8285EB65A003B54A0 /* NotflixTests.swift */; };
-		DDF93D03285EB65A003B54A0 /* NotflixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D02285EB65A003B54A0 /* NotflixUITests.swift */; };
-		DDF93D05285EB65A003B54A0 /* NotflixUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D04285EB65A003B54A0 /* NotflixUITestsLaunchTests.swift */; };
+		DDF93D15285EBC21003B54A0 /* MoviesListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D14285EBC21003B54A0 /* MoviesListingViewController.swift */; };
+		DDF93D19285EBD91003B54A0 /* MoviesListingViewControllerUIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D18285EBD91003B54A0 /* MoviesListingViewControllerUIExtension.swift */; };
+		DDF93D1B285EBEAD003B54A0 /* MoviesListingCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D1A285EBEAD003B54A0 /* MoviesListingCollectionViewDataSource.swift */; };
+		DDF93D1E285EC1C8003B54A0 /* MoviesListingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D1D285EC1C8003B54A0 /* MoviesListingCollectionViewCell.swift */; };
+		DDF93D21285F7085003B54A0 /* MoviesListingCollectionViewDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D20285F7085003B54A0 /* MoviesListingCollectionViewDelegateFlowLayout.swift */; };
+		DDF93D2E285F8299003B54A0 /* MoviesListingCollectionViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D2D285F8298003B54A0 /* MoviesListingCollectionViewDataSourceTests.swift */; };
+		DDF93D3028600B83003B54A0 /* MoviesListingCollectionViewDelegateFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D2F28600B83003B54A0 /* MoviesListingCollectionViewDelegateFlowLayoutTests.swift */; };
+		DDF93D3228600FB8003B54A0 /* MoviesListingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF93D3128600FB8003B54A0 /* MoviesListingViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DDF93CF5285EB65A003B54A0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DDF93CD6285EB656003B54A0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DDF93CDD285EB656003B54A0;
-			remoteInfo = Notflix;
-		};
-		DDF93CFF285EB65A003B54A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DDF93CD6285EB656003B54A0 /* Project object */;
 			proxyType = 1;
@@ -39,16 +36,19 @@
 		DDF93CDE285EB656003B54A0 /* Notflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF93CE1285EB656003B54A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF93CE3285EB656003B54A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDF93CE5285EB656003B54A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DDF93CE8285EB656003B54A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDF93CEA285EB65A003B54A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF93CED285EB65A003B54A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF93CEF285EB65A003B54A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF93CF4285EB65A003B54A0 /* NotflixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotflixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF93CF8285EB65A003B54A0 /* NotflixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotflixTests.swift; sourceTree = "<group>"; };
-		DDF93CFE285EB65A003B54A0 /* NotflixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotflixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF93D02285EB65A003B54A0 /* NotflixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotflixUITests.swift; sourceTree = "<group>"; };
-		DDF93D04285EB65A003B54A0 /* NotflixUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotflixUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DDF93D14285EBC21003B54A0 /* MoviesListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingViewController.swift; sourceTree = "<group>"; };
+		DDF93D18285EBD91003B54A0 /* MoviesListingViewControllerUIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingViewControllerUIExtension.swift; sourceTree = "<group>"; };
+		DDF93D1A285EBEAD003B54A0 /* MoviesListingCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		DDF93D1D285EC1C8003B54A0 /* MoviesListingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingCollectionViewCell.swift; sourceTree = "<group>"; };
+		DDF93D20285F7085003B54A0 /* MoviesListingCollectionViewDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingCollectionViewDelegateFlowLayout.swift; sourceTree = "<group>"; };
+		DDF93D2D285F8298003B54A0 /* MoviesListingCollectionViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingCollectionViewDataSourceTests.swift; sourceTree = "<group>"; };
+		DDF93D2F28600B83003B54A0 /* MoviesListingCollectionViewDelegateFlowLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingCollectionViewDelegateFlowLayoutTests.swift; sourceTree = "<group>"; };
+		DDF93D3128600FB8003B54A0 /* MoviesListingViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListingViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +66,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDF93CFB285EB65A003B54A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +74,6 @@
 			children = (
 				DDF93CE0285EB656003B54A0 /* Notflix */,
 				DDF93CF7285EB65A003B54A0 /* NotflixTests */,
-				DDF93D01285EB65A003B54A0 /* NotflixUITests */,
 				DDF93CDF285EB656003B54A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +83,6 @@
 			children = (
 				DDF93CDE285EB656003B54A0 /* Notflix.app */,
 				DDF93CF4285EB65A003B54A0 /* NotflixTests.xctest */,
-				DDF93CFE285EB65A003B54A0 /* NotflixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,10 +90,9 @@
 		DDF93CE0285EB656003B54A0 /* Notflix */ = {
 			isa = PBXGroup;
 			children = (
+				DDF93D11285EBBB9003B54A0 /* Presentation */,
 				DDF93CE1285EB656003B54A0 /* AppDelegate.swift */,
 				DDF93CE3285EB656003B54A0 /* SceneDelegate.swift */,
-				DDF93CE5285EB656003B54A0 /* ViewController.swift */,
-				DDF93CE7285EB656003B54A0 /* Main.storyboard */,
 				DDF93CEA285EB65A003B54A0 /* Assets.xcassets */,
 				DDF93CEC285EB65A003B54A0 /* LaunchScreen.storyboard */,
 				DDF93CEF285EB65A003B54A0 /* Info.plist */,
@@ -113,18 +103,88 @@
 		DDF93CF7285EB65A003B54A0 /* NotflixTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDF93D29285F8264003B54A0 /* Presentation */,
 				DDF93CF8285EB65A003B54A0 /* NotflixTests.swift */,
 			);
 			path = NotflixTests;
 			sourceTree = "<group>";
 		};
-		DDF93D01285EB65A003B54A0 /* NotflixUITests */ = {
+		DDF93D11285EBBB9003B54A0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				DDF93D02285EB65A003B54A0 /* NotflixUITests.swift */,
-				DDF93D04285EB65A003B54A0 /* NotflixUITestsLaunchTests.swift */,
+				DDF93D12285EBBC2003B54A0 /* Modules */,
 			);
-			path = NotflixUITests;
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DDF93D12285EBBC2003B54A0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D13285EBBC7003B54A0 /* Listing */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DDF93D13285EBBC7003B54A0 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D22285F7EF7003B54A0 /* View */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		DDF93D1C285EC193003B54A0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D1D285EC1C8003B54A0 /* MoviesListingCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DDF93D22285F7EF7003B54A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D1C285EC193003B54A0 /* Cells */,
+				DDF93D1A285EBEAD003B54A0 /* MoviesListingCollectionViewDataSource.swift */,
+				DDF93D14285EBC21003B54A0 /* MoviesListingViewController.swift */,
+				DDF93D20285F7085003B54A0 /* MoviesListingCollectionViewDelegateFlowLayout.swift */,
+				DDF93D18285EBD91003B54A0 /* MoviesListingViewControllerUIExtension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDF93D29285F8264003B54A0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D2A285F8269003B54A0 /* Modules */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DDF93D2A285F8269003B54A0 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D2B285F826E003B54A0 /* Listing */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DDF93D2B285F826E003B54A0 /* Listing */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D2C285F8275003B54A0 /* View */,
+			);
+			path = Listing;
+			sourceTree = "<group>";
+		};
+		DDF93D2C285F8275003B54A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDF93D2D285F8298003B54A0 /* MoviesListingCollectionViewDataSourceTests.swift */,
+				DDF93D2F28600B83003B54A0 /* MoviesListingCollectionViewDelegateFlowLayoutTests.swift */,
+				DDF93D3128600FB8003B54A0 /* MoviesListingViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +225,6 @@
 			productReference = DDF93CF4285EB65A003B54A0 /* NotflixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DDF93CFD285EB65A003B54A0 /* NotflixUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DDF93D0E285EB65B003B54A0 /* Build configuration list for PBXNativeTarget "NotflixUITests" */;
-			buildPhases = (
-				DDF93CFA285EB65A003B54A0 /* Sources */,
-				DDF93CFB285EB65A003B54A0 /* Frameworks */,
-				DDF93CFC285EB65A003B54A0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DDF93D00285EB65A003B54A0 /* PBXTargetDependency */,
-			);
-			name = NotflixUITests;
-			productName = NotflixUITests;
-			productReference = DDF93CFE285EB65A003B54A0 /* NotflixUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +239,6 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					DDF93CF3285EB65A003B54A0 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = DDF93CDD285EB656003B54A0;
-					};
-					DDF93CFD285EB65A003B54A0 = {
 						CreatedOnToolsVersion = 13.1;
 						TestTargetID = DDF93CDD285EB656003B54A0;
 					};
@@ -221,7 +259,6 @@
 			targets = (
 				DDF93CDD285EB656003B54A0 /* Notflix */,
 				DDF93CF3285EB65A003B54A0 /* NotflixTests */,
-				DDF93CFD285EB65A003B54A0 /* NotflixUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +270,10 @@
 			files = (
 				DDF93CEE285EB65A003B54A0 /* LaunchScreen.storyboard in Resources */,
 				DDF93CEB285EB65A003B54A0 /* Assets.xcassets in Resources */,
-				DDF93CE9285EB656003B54A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DDF93CF2285EB65A003B54A0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF93CFC285EB65A003B54A0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF93CE6285EB656003B54A0 /* ViewController.swift in Sources */,
+				DDF93D19285EBD91003B54A0 /* MoviesListingViewControllerUIExtension.swift in Sources */,
+				DDF93D1B285EBEAD003B54A0 /* MoviesListingCollectionViewDataSource.swift in Sources */,
+				DDF93D1E285EC1C8003B54A0 /* MoviesListingCollectionViewCell.swift in Sources */,
+				DDF93D21285F7085003B54A0 /* MoviesListingCollectionViewDelegateFlowLayout.swift in Sources */,
+				DDF93D15285EBC21003B54A0 /* MoviesListingViewController.swift in Sources */,
 				DDF93CE2285EB656003B54A0 /* AppDelegate.swift in Sources */,
 				DDF93CE4285EB656003B54A0 /* SceneDelegate.swift in Sources */,
 			);
@@ -268,16 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF93D3228600FB8003B54A0 /* MoviesListingViewControllerTests.swift in Sources */,
 				DDF93CF9285EB65A003B54A0 /* NotflixTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DDF93CFA285EB65A003B54A0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF93D03285EB65A003B54A0 /* NotflixUITests.swift in Sources */,
-				DDF93D05285EB65A003B54A0 /* NotflixUITestsLaunchTests.swift in Sources */,
+				DDF93D3028600B83003B54A0 /* MoviesListingCollectionViewDelegateFlowLayoutTests.swift in Sources */,
+				DDF93D2E285F8299003B54A0 /* MoviesListingCollectionViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,22 +316,9 @@
 			target = DDF93CDD285EB656003B54A0 /* Notflix */;
 			targetProxy = DDF93CF5285EB65A003B54A0 /* PBXContainerItemProxy */;
 		};
-		DDF93D00285EB65A003B54A0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DDF93CDD285EB656003B54A0 /* Notflix */;
-			targetProxy = DDF93CFF285EB65A003B54A0 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DDF93CE7285EB656003B54A0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDF93CE8285EB656003B54A0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DDF93CEC285EB65A003B54A0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,7 +458,6 @@
 				INFOPLIST_FILE = Notflix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -472,7 +485,6 @@
 				INFOPLIST_FILE = Notflix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -538,52 +550,6 @@
 			};
 			name = Release;
 		};
-		DDF93D0F285EB65B003B54A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PAQTM3NV6N;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mrcdlbr.NotflixUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Notflix;
-			};
-			name = Debug;
-		};
-		DDF93D10285EB65B003B54A0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PAQTM3NV6N;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mrcdlbr.NotflixUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Notflix;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -610,15 +576,6 @@
 			buildConfigurations = (
 				DDF93D0C285EB65B003B54A0 /* Debug */,
 				DDF93D0D285EB65B003B54A0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DDF93D0E285EB65B003B54A0 /* Build configuration list for PBXNativeTarget "NotflixUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DDF93D0F285EB65B003B54A0 /* Debug */,
-				DDF93D10285EB65B003B54A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
