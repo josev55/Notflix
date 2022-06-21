@@ -11,14 +11,24 @@ class MoviesListingViewController: UIViewController {
     weak var moviesCollectionView: UICollectionView!
     var collectionViewDataSource: MoviesListingCollectionViewDataSource!
     var collectionViewDelegateFlowLayout: MoviesListingCollectionViewDelegateFlowLayout!
+    var presenter: MoviesListingPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         moviesCollectionView.register(MoviesListingCollectionViewCell.self, forCellWithReuseIdentifier: MoviesListingCollectionViewCell.typeName)
-        collectionViewDataSource = MoviesListingCollectionViewDataSource([1, 2, 3, 4, 5], collectionView: self.moviesCollectionView)
+        collectionViewDataSource = MoviesListingCollectionViewDataSource([], collectionView: self.moviesCollectionView)
         collectionViewDelegateFlowLayout = MoviesListingCollectionViewDelegateFlowLayout()
         moviesCollectionView.dataSource = collectionViewDataSource
         moviesCollectionView.delegate = collectionViewDelegateFlowLayout
+        
+        presenter?.view = self
+        Task {
+            do {
+                try await presenter?.getTrendingMovies()
+            } catch {
+                
+            }
+        }
     }
 
     override func loadView() {

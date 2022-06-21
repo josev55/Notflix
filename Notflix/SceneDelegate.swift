@@ -10,12 +10,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let appDelegate = UIApplication.shared.delegate
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let mainScene = (scene as? UIWindowScene) else { return }
+        
+        guard let container = (appDelegate as? AppDelegate)?.container else { return }
+        
         let mainWindow = UIWindow(windowScene: mainScene)
-        mainWindow.rootViewController = MoviesListingViewController()
+        mainWindow.rootViewController = container.resolve(MoviesListingViewController.self)
         self.window = mainWindow
         mainWindow.makeKeyAndVisible()
     }

@@ -9,13 +9,13 @@ import UIKit
 
 class MoviesListingCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     weak var collectionView: UICollectionView!
-    var movies: [Any] {
+    var movies: [MovieModel] {
         didSet {
             collectionView.reloadData()
         }
     }
     
-    init(_ movies: [Any], collectionView: UICollectionView) {
+    init(_ movies: [MovieModel], collectionView: UICollectionView) {
         self.movies = movies
         self.collectionView = collectionView
     }
@@ -29,8 +29,11 @@ class MoviesListingCollectionViewDataSource: NSObject, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesListingCollectionViewCell.typeName, for: indexPath) as? MoviesListingCollectionViewCell ?? UICollectionViewCell()
-        cell.backgroundColor = .red
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MoviesListingCollectionViewCell.typeName, for: indexPath) as? MoviesListingCollectionViewCell else { return UICollectionViewCell()
+        }
+        let model = movies[indexPath.row]
+        
+        cell.configure(with: model)
         return cell
     }
 }
