@@ -28,7 +28,12 @@ class MoviesListingCollectionViewDataSourceTests: XCTestCase {
     
     func testShouldReturnCorrectNumberOfItems() {
         // Arrange
-        dataSource.movies = [1, 2, 3, 4]
+        dataSource.movies = [
+            MovieModel(imageUrl: "", title: "", rating: ""),
+            MovieModel(imageUrl: "", title: "", rating: ""),
+            MovieModel(imageUrl: "", title: "", rating: ""),
+            MovieModel(imageUrl: "", title: "", rating: "")
+        ]
         
         // Act
         let numberOfItems = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
@@ -38,6 +43,9 @@ class MoviesListingCollectionViewDataSourceTests: XCTestCase {
     }
     
     func testShouldReturnCorrectTypeOfCell() {
+        // Arrange
+        dataSource.movies = [MovieModel(imageUrl: "", title: "", rating: "")]
+        
         // Act
         let cell = dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row: 0, section: 0))
         
@@ -48,7 +56,10 @@ class MoviesListingCollectionViewDataSourceTests: XCTestCase {
     
     func testDidReloadDataOnMoviesSet() {
         // Act
-        dataSource.movies = [1, 2]
+        dataSource.movies = [
+            MovieModel(imageUrl: "", title: "", rating: ""),
+            MovieModel(imageUrl: "", title: "", rating: "")
+        ]
         
         // Assert
         XCTAssertTrue(collectionView.didCallReloadData)
