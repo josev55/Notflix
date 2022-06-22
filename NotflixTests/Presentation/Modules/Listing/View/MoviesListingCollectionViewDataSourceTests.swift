@@ -29,10 +29,11 @@ class MoviesListingCollectionViewDataSourceTests: XCTestCase {
     func testShouldReturnCorrectNumberOfItems() {
         // Arrange
         dataSource.movies = [
-            MovieModel(imageUrl: "", title: "", rating: ""),
-            MovieModel(imageUrl: "", title: "", rating: ""),
-            MovieModel(imageUrl: "", title: "", rating: ""),
-            MovieModel(imageUrl: "", title: "", rating: "")
+            MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: ""),
+            MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: ""),
+            MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: ""),
+            MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: "")
+            
         ]
         
         // Act
@@ -44,7 +45,7 @@ class MoviesListingCollectionViewDataSourceTests: XCTestCase {
     
     func testShouldReturnCorrectTypeOfCell() {
         // Arrange
-        dataSource.movies = [MovieModel(imageUrl: "", title: "", rating: "")]
+        dataSource.movies = [MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: "")]
         
         // Act
         let cell = dataSource.collectionView(collectionView, cellForItemAt: IndexPath(row: 0, section: 0))
@@ -57,8 +58,8 @@ class MoviesListingCollectionViewDataSourceTests: XCTestCase {
     func testDidReloadDataOnMoviesSet() {
         // Act
         dataSource.movies = [
-            MovieModel(imageUrl: "", title: "", rating: ""),
-            MovieModel(imageUrl: "", title: "", rating: "")
+            MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: ""),
+            MovieModel(movieId: "", imageUrl:  URL(string: "http://google.com")!, title: "", rating: "")
         ]
         
         // Assert

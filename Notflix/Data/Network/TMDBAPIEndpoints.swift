@@ -13,4 +13,8 @@ final class TMDBAPIEndpoints {
     static func trendingMoviesEndpoint() -> Endpoint {
         return Endpoint(path: "/trending/movie/week", queryParameters: [API_KEY_PARAM_KEY: SharedConfig.instance.apiKey])
     }
+    
+    static func movieDetailsEndpoint(movieId: String) -> Endpoint {
+        return Endpoint(path: String(format: "/movie/%@", movieId), queryParameters: [API_KEY_PARAM_KEY: SharedConfig.instance.apiKey])
+    }
 }

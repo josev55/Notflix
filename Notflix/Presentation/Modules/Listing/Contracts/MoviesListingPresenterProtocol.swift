@@ -6,5 +6,7 @@
 //
 protocol MoviesListingPresenterProtocol {
     var view: MoviesListingViewProtocol? { get set }
+    var coordinator: Coordinator? { get set }
     func getTrendingMovies() async throws
+    func showMovieDetails(movieId: String)
 }

@@ -13,19 +13,25 @@ class MoviesListingPresenterTests: XCTestCase {
     var moviesListingView: MoviesListingViewMock!
 
     override func setUpWithError() throws {
-        presenter = MoviesListingPresenter()
+        presenter = MoviesListingPresenter(trendingMoviesUseCase: TrendingMoviesUseCaseMock())
         moviesListingView = MoviesListingViewMock()
         presenter.view = moviesListingView
     }
     
     func testGetTrendingMoviesSucceed() {
-        // Act
-        presenter.getTrendingMovies()
-        
-        // Assert
-        XCTAssertTrue(moviesListingView.didCallShowLoading)
-        XCTAssertTrue(moviesListingView.didCallShowTrendingMovies)
-        XCTAssertTrue(moviesListingView.didCallHideLoading)
+        Task {
+            // Arrange
+            moviesListingView = MoviesListingViewMock()
+            presenter.view = moviesListingView
+            
+            // Act
+            await presenter.getTrendingMovies()
+            
+            // Assert
+            XCTAssertTrue(moviesListingView.didCallShowLoading)
+            XCTAssertTrue(moviesListingView.didCallShowTrendingMovies)
+            XCTAssertTrue(moviesListingView.didCallHideLoading)
+        }
     }
 
     override func tearDownWithError() throws {
@@ -54,5 +60,11 @@ class MoviesListingViewMock: MoviesListingViewProtocol {
     
     func showTrendingMovies(movies: [MovieModel]) {
         didCallShowTrendingMovies = true
+    }
+}
+
+class TrendingMoviesUseCaseMock: TrendingMoviesUseCaseProtocol {
+    func execute() async throws -> TrendingMoviesEntity {
+        return TrendingMoviesEntity(trendingMovies: [])
     }
 }
