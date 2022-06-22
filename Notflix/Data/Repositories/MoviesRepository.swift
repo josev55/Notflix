@@ -19,6 +19,17 @@ enum DomainError: Error {
 }
 
 extension MoviesRepository: MoviesRepositoryProtocol {
+    func getMovieDetailsFor(movieId: String) async throws -> MovieDetailsDTO {
+        let serviceResponse: ServiceStatus<MovieDetailsDTO> = try await serviceClient.request(with: TMDBAPIEndpoints.movieDetailsEndpoint(movieId: movieId))
+        switch serviceResponse {
+            case .success(let data):
+            guard let data = data else { throw DomainError.mappingError }
+            return data
+            case .failure:
+            throw DomainError.networkError
+        }
+    }
+    
     func getTrendingMovies() async throws -> TrendingMoviesDTO {
         let serviceResponse: ServiceStatus<TrendingMoviesDTO> = try await serviceClient.request(with: TMDBAPIEndpoints.trendingMoviesEndpoint())
         switch serviceResponse {

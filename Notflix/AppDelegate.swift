@@ -29,11 +29,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MoviesListingPresenter(trendingMoviesUseCase: r.resolve(TrendingMoviesUseCaseProtocol.self)!)
         }
         
+        container.register(Coordinator.self) { r in
+            let mainViewController = r.resolve(MoviesListingViewController.self)
+            let coordinator = MainCoordinator(navigationController: UINavigationController(rootViewController: mainViewController ?? UIViewController()))
+            mainViewController?.presenter?.coordinator = coordinator
+            return coordinator
+        }
+        
         container.register(MoviesListingViewController.self) { r in
-            let presenter = r.resolve(MoviesListingPresenterProtocol.self)
             let controller = MoviesListingViewController()
+            var presenter = r.resolve(MoviesListingPresenterProtocol.self)
             controller.presenter = presenter
+
             return controller
+        }
+        
+        container.register(MovieDetailsUseCaseProtocol.self) { r in
+            return MovieDetailsUseCase(moviesRepository: r.resolve(MoviesRepositoryProtocol.self)!)
+        }
+        
+        container.register(MovieDetailsPresenterProtocol.self) { r in
+            return MovieDetailsPresenter(movieDetailsUseCase: r.resolve(MovieDetailsUseCaseProtocol.self)!)
+        }
+        
+        container.register(MovieDetailsViewController.self) { r in
+            let movieDetailsViewController = MovieDetailsViewController()
+            movieDetailsViewController.presenter = r.resolve(MovieDetailsPresenterProtocol.self)
+            return movieDetailsViewController
         }
         
         return container

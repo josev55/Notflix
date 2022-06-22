@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let container = (appDelegate as? AppDelegate)?.container else { return }
         
         let mainWindow = UIWindow(windowScene: mainScene)
-        mainWindow.rootViewController = container.resolve(MoviesListingViewController.self)
+        let coordinator = container.resolve(Coordinator.self)
+        
+        mainWindow.rootViewController = coordinator?.navigationController
         self.window = mainWindow
         mainWindow.makeKeyAndVisible()
     }

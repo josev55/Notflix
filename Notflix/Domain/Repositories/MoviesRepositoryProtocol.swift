@@ -7,4 +7,5 @@
 
 protocol MoviesRepositoryProtocol {
     func getTrendingMovies() async throws -> TrendingMoviesDTO
+    func getMovieDetailsFor(movieId: String) async throws -> MovieDetailsDTO
 }

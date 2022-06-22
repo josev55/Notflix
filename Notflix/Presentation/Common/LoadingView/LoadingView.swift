@@ -25,6 +25,7 @@ class LoadingView {
         label.text = text
         
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .white
         indicator.translatesAutoresizingMaskIntoConstraints = false
         label.translatesAutoresizingMaskIntoConstraints = false
         

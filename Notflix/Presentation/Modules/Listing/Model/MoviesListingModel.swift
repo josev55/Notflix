@@ -8,6 +8,7 @@
 import UIKit
 
 struct MovieModel {
+    let movieId: String
     let imageUrl: URL
     let title: String
     let rating: String

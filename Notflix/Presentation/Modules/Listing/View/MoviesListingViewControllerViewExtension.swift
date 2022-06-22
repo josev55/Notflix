@@ -23,6 +23,7 @@ extension MoviesListingViewController: MoviesListingViewProtocol {
     func showTrendingMovies(movies: [MovieModel]) {
         DispatchQueue.main.async {
             self.collectionViewDataSource.movies = movies
+            self.collectionViewDelegateFlowLayout.dataSource = movies
         }
     }
     
